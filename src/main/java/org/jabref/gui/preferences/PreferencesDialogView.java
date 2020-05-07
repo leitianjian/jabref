@@ -58,6 +58,11 @@ public class PreferencesDialogView extends BaseDialog<PreferencesDialogViewModel
         return viewModel;
     }
 
+    /**
+     * Return preferenceTabList the preferenceTabList
+     */
+    public ListView<PreferencesTab> getPreferenceTabList() { return preferenceTabList; }
+
     @FXML
     private void initialize() {
         viewModel = new PreferencesDialogViewModel(dialogService, frame);
