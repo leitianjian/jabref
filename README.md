@@ -19,11 +19,11 @@ reasons for choosing issue:
 
 before fixing issue:
 
-![1588836740889](.\中期\figures\#6039_fig_1.png)
+![#6039_before_fixing](./figures/#6039_fig_1.png)
 
 after fixing the issue:
 
-![1588836826400](.\figures\#6039_fig_2.png)
+![#6039_after_fixing](./figures/#6039_fig_2.png)
 
 
 
@@ -33,9 +33,9 @@ after fixing the issue:
 
 checkstyle:
 
-![1588848833652](.\figures\#6039_result_of_checkstyle.png)
+![#6039_result_of_checkstyle](./figures/#6039_result_of_checkstyle.png)
 
 our checkStyle rules can be seen in {$ProjectFolder}/config/checkstyle/checkstyle.xml
 
-Findbugs/PMD(using QAPlug):![1588860251722](.\figures\#6039_result_of_QAPlug.png)
+Findbugs/PMD(using QAPlug):![#6039_result_of_QAPlug](./figures/#6039_result_of_QAPlug.png)
 
