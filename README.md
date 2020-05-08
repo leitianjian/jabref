@@ -82,28 +82,28 @@ There are no warning generated because of codes modified by us
 
 #### Checkstyle:
 
-<img src="./figures/6198_result_of_QAPlug.png" width="70%" height="70%"/>
+<img src="./figures/6198_result_of_checkstyle.png" width="70%" height="70%"/>
 
 #### Findbugs/PMD(using QAPlug):
 
-![1588860251723](./figures/6198_result_of_checkstyle.png)
+![1588860251723](./figures/6198_result_of_QAplug.png)
 
 ### During fixing #6169
 
 #### Checkstyle:
 
-<img src="./figures/6169_result_of_QAPlug.png" width="70%" height="70%"/>
+<img src="./figures/6169_result_of_checkstyle.png" width="70%" height="70%"/>
 
 #### Findbugs/PMD(using QAPlug):
 
-![1588860251723](./figures/6169_result_of_checkstyle.png)
+![1588860251723](./figures/6169_result_of_QAplug.png)
 
 ### During fixing #6146
 
 #### Checkstyle:
 
-<img src="./figures/6146_result_of_QAPlug.png" width="70%" height="70%"/>
+<img src="./figures/6146_result_of_checkstyle.png" width="70%" height="70%"/>
 
 #### Findbugs/PMD(using QAPlug):
 
-![1588860251723](./figures/6146_result_of_checkstyle.png)
+![1588860251723](./figures/6146_result_of_QAPlug.png)
