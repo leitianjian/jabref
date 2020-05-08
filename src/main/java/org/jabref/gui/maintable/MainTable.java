@@ -46,7 +46,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MainTable extends TableView<BibEntryTableViewModel> {
-
+    private static final long TWO_KEY_PRESS_MAX_DURATION = 700;
     private static final Logger LOGGER = LoggerFactory.getLogger(MainTable.class);
 
     private final BasePanel panel;
@@ -136,7 +136,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
 
     /**
      * This is called, if a user starts typing some characters into the keyboard with focus on main table.
-     * The tableview will scroll to the next cell with the name of the PreviewLayout fitting those characters.
+     * The tableview will scroll to the cell with the name of the specific column fitting those characters.
      * @param sortedColumn The ListView currently focused
      * @param keyEvent The pressed character
      */
@@ -146,7 +146,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
             return;
         }
 
-        if (System.currentTimeMillis() - lastKeyPressTime < 700) {
+        if (System.currentTimeMillis() - lastKeyPressTime < this.TWO_KEY_PRESS_MAX_DURATION) {
             columnSearchTerm += keyEvent.getCharacter().toLowerCase();
         } else {
             columnSearchTerm = keyEvent.getCharacter().toLowerCase();
