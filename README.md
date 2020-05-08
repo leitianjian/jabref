@@ -66,6 +66,11 @@ Positive: If the `name` passed in method is in `externalFileTypes` list , then o
 
 Negative: If the `name` passed in method is **not** in `externalFileTypes` list , then output `UnknownExternalFileType`
 
+### [#5633](https://github.com/JabRef/jabref/issues/5633)
+
+This issue can be judged intuitively from the GUI interface. When the file is dragging into the entity, the file annotation tab can appear immediately, the implementation result has been attached. We have tried our best to use mock testing, by mocking the objects to trigger such situation, but in the end it failed. This method involves too many scenarios, such as pressing alt or ctrl in keyboods, it is hard to use mock testing to situmilate specific one. Besides, it is private, it needs table row, coloum, bidentry, context menu etc. to set serveral objects. Therefore, we can't write testing for this bug.
+
+
 ## User story for each issue:
 
 ### [#6039](https://github.com/JabRef/jabref/issues/6039) Font size increase does not increase preferences font size
