@@ -65,3 +65,4 @@ our checkStyle rules can be seen in {$ProjectFolder}/config/checkstyle/checkstyl
 
 Findbugs/PMD(using QAPlug):![1588860251722](./figures/6039_result_of_QAPlug.png)
 
+There are no warning generated because of codes modified by us
