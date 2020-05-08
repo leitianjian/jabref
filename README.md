@@ -134,3 +134,29 @@ There are no warning generated because of codes modified by us
 #### Findbugs/PMD(using QAPlug):
 
 ![1588860251724](./figures/5633_result_of_QAPlug.jpg)
+
+
+### Schedule
+
+Week | Issues
+:----: | :----
+Week 13 | [#6055 Entry removed from group keeps being displayed in entry table](https://github.com/JabRef/jabref/issues/6055)<br>[#6401 JabRef.xml for memory stick mode is not generated when running installed version](https://github.com/JabRef/jabref/issues/6401)
+Week 14 | [#6348 Manually fix columns width, define columns' width as (non) flexible](https://github.com/JabRef/jabref/issues/6348)<br>[#6391 Irregular behaviour of "change preview" F9](https://github.com/JabRef/jabref/issues/6391)
+Week 15 | [#6259 Searching rescales columns](https://github.com/JabRef/jabref/issues/6259)
+
+#### User stories
+
+##### [#6055 Entry removed from group keeps being displayed in entry table](https://github.com/JabRef/jabref/issues/6055)
+When the user deletes selected itemes, a timely updating is needed to better manage his files and not , instead of the deleted item remaining on the interface, which requires switching between different groups.
+
+##### [#6401 JabRef.xml for memory stick mode is not generated when running installed version](https://github.com/JabRef/jabref/issues/6401)
+User want JabRef.xml to be generated when apply memory stick mode in preferences, so that this mode can work properly.
+
+##### [#6348 Manually fix columns width, define columns' width as (non) flexible](https://github.com/JabRef/jabref/issues/6348)
+User want to init column width the same as the width they set last time before closing JabRef, so that they needn't to resize column width manually when open JabRef next time.
+
+##### [#6391 Irregular behaviour of "change preview" F9](https://github.com/JabRef/jabref/issues/6391)
+User wants to change the preview style conveniently, that is at any place, so that it needs to work on every tabs, instead of invalid in the required fields tab.
+
+##### [#6259 Searching rescales columns](https://github.com/JabRef/jabref/issues/6259)
+User changes the scale of the column according to the length of the author, file name, etc. Therefore, he does not want to change the width into default scale after searching, which wastes a lot of extra time.
