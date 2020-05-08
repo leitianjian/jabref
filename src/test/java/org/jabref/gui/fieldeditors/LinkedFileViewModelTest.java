@@ -14,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import org.jabref.gui.DialogService;
 import org.jabref.gui.externalfiletype.ExternalFileTypes;
 import org.jabref.gui.externalfiletype.StandardExternalFileType;
+import org.jabref.gui.icon.IconTheme;
 import org.jabref.gui.util.BackgroundTask;
 import org.jabref.gui.util.CurrentThreadTaskExecutor;
 import org.jabref.gui.util.TaskExecutor;
@@ -150,6 +151,37 @@ class LinkedFileViewModelTest {
 
         assertFalse(removed);
         assertTrue(Files.exists(tempFile));
+    }
+
+    @Test
+    void getTypeIconTest() {
+        ExternalFileTypes myExternalFileType = mock(ExternalFileTypes.class);
+        linkedFile = new LinkedFile("desc", tempFile.toString(), "pdf");
+        when(myExternalFileType.fromLinkedFile(linkedFile,false)).thenReturn(Optional.of(StandardExternalFileType.PDF));
+
+        LinkedFileViewModel viewModel = new LinkedFileViewModel(linkedFile, entry, databaseContext, taskExecutor, dialogService, xmpPreferences, filePreferences, myExternalFileType);
+        assertEquals(viewModel.getTypeIcon(), IconTheme.JabRefIcons.PDF_FILE);
+
+    }
+
+    @Test
+    void getTypeIconSecondTest() {
+        ExternalFileTypes myExternalFileType = mock(ExternalFileTypes.class);
+        linkedFile = new LinkedFile("desc", tempFile.toString(), "word");
+        when(myExternalFileType.fromLinkedFile(linkedFile,false)).thenReturn(Optional.of(StandardExternalFileType.Word));
+
+        LinkedFileViewModel viewModel = new LinkedFileViewModel(linkedFile, entry, databaseContext, taskExecutor, dialogService, xmpPreferences, filePreferences, myExternalFileType);
+        assertEquals(viewModel.getTypeIcon(), IconTheme.JabRefIcons.FILE_WORD);
+
+    }
+
+    @Test
+    void getTypeIconThirdTest() {
+        linkedFile = new LinkedFile("desc", tempFile.toString(), "");
+
+        LinkedFileViewModel viewModel = new LinkedFileViewModel(linkedFile, entry, databaseContext, taskExecutor, dialogService, xmpPreferences, filePreferences, externalFileType);
+        assertEquals(viewModel.getTypeIcon(), IconTheme.JabRefIcons.FILE);
+
     }
 
     @FetcherTest
