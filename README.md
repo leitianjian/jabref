@@ -47,6 +47,25 @@
 
 We have tried our best to use mock testing method to test. However, we came across inevitable hinder. We can't get the corresponding font size value from css file and only can get the metadata of css which is useless(https://stackoverflow.com/questions/33144735/how-to-get-the-value-of-a-css-definition-in-javafx). Therefore, we can't write tests for this part.
 
+### [#6169](https://github.com/JabRef/jabref/issues/6169)
+
+Tests for getTypeIcon() in LinkedFileViewModel.java:
+(The test scripts are in https://github.com/leitianjian/jabref/blob/hand_in_progredd_report/src/test/java/org/jabref/gui/fieldeditors/LinkedFileViewModelTest.java)
+
+Positive_1: If   `LinkedFile` type can be found in `ExternalFileTypes` then display corresponding `JabRefIcon` (In this positive case, it is `PDF` icon)
+
+Positive_2:  If   `LinkedFile` type can be found in `ExternalFileTypes` then display corresponding `JabRefIcon` (In this positive case, it is `WORD` icon)
+
+Negative:  If   `LinkedFile` type can **not** be found in `ExternalFileTypes` then display `JabRefIcons.FILE`
+
+Tests for getExternalFileTypeByName() in ExternalFileTypes.java:
+
+(The test scripts are in https://github.com/leitianjian/jabref/blob/hand_in_progredd_report/src/test/java/org/jabref/gui/externalfiles/ExternalFileTypesTest.java)
+
+Positive: If the `name` passed in method is in `externalFileTypes` list , then output corresponding `externalFileType` (We test three different `externalFileType`s)
+
+Negative: If the `name` passed in method is **not** in `externalFileTypes` list , then output `UnknownExternalFileType`
+
 ## User story for each issue:
 
 ### [#6039](https://github.com/JabRef/jabref/issues/6039) Font size increase does not increase preferences font size
