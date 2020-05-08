@@ -168,6 +168,16 @@ There are no warning generated because of codes modified by us
 
 ![1588860251723](./figures/6146_result_of_QAPlug.png)
 
+### During fixing #6180
+
+#### CheckStyle:
+
+<img src="./figures/6180_result_of_checkstyle.png" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![1588860251723](./figures/6180_result_of_QAPlug.png)
+
 ### During fixing #5633
 
 #### Checkstyle:
