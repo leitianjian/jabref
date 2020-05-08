@@ -66,6 +66,10 @@ Positive: If the `name` passed in method is in `externalFileTypes` list , then o
 
 Negative: If the `name` passed in method is **not** in `externalFileTypes` list , then output `UnknownExternalFileType`
 
+### [#6180](https://github.com/JabRef/jabref/issues/6180)
+
+This issue is to keep group pane size when resizing window. When writing test cases, we need to call some methods to resize window and to see whether group pane keeps size. But  we didn't find methods can call to resize window. And we stucked in how to mock window size changing. Then we searched this on web, there are possible answers, such as (https://stackoverflow.com/questions/45868042/figuring-out-how-to-mock-the-window-size-changing-for-a-react-component-test). And we tried, but failed due to unknow method calls. 
+
 ### [#5633](https://github.com/JabRef/jabref/issues/5633)
 
 This issue can be judged intuitively from the GUI interface. When the file is dragging into the entity, the file annotation tab can appear immediately, the implementation result has been attached. We have tried our best to use mock testing, by mocking the objects to trigger such situation, but in the end it failed. This method involves too many scenarios, such as pressing alt or ctrl in keyboods, it is hard to use mock testing to situmilate specific one. Besides, it is private, it needs table row, coloum, bidentry, context menu etc. to set serveral objects. Therefore, we can't write testing for this bug.
