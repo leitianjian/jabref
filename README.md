@@ -8,6 +8,7 @@
 3. <https://github.com/JabRef/jabref/issues/6169>
 4. <https://github.com/JabRef/jabref/issues/6146>
 5. <https://github.com/JabRef/jabref/issues/6180>
+6. <https://github.com/JabRef/jabref/issues/5633>
 
 
 ### reasons for choosing issue:
@@ -32,8 +33,13 @@
 3. Nobody claims that.
 
 #### [#6180](https://github.com/JabRef/jabref/issues/6180) Groups panel does not keep size when resizing window
-1. moderate difficulty for us.
+1. Moderate difficulty for us.
 2. User requirement.
+
+#### [#5633](https://github.com/JabRef/jabref/issues/5633) File annotations should be parsed if a file is attached
+1. It makes sense to understand user iteration and listen mechanism better.
+2. Normal priority and moderate difficulty.
+
 
 ## Test scenario
 
@@ -65,6 +71,11 @@ User has a habbit to type a letter/digit to jump to target entry after sort some
 
 ### [#6180](https://github.com/JabRef/jabref/issues/6180) Groups panel does not keep size when resizing window
 User want to keep group pane size when resizing window, so that he/her don't need to resize group pane manually when resizing window.
+
+### [#5633](https://github.com/JabRef/jabref/issues/5633) File annotations should be parsed if a file is attached
+User want to check file annotations immediately after dragging file, but don't want to take time for switching entities.
+![Image text](https://github.com/leitianjian/jabref/blob/hand_in_progredd_report/figures/5633-fig.gif)
+
 
 ## Results of static code analysis tool
 
@@ -113,3 +124,13 @@ There are no warning generated because of codes modified by us
 #### Findbugs/PMD(using QAPlug):
 
 ![1588860251723](./figures/6146_result_of_QAPlug.png)
+
+### During fixing #5633
+
+#### Checkstyle:
+
+<img src="./figures/5633_result_of_checkstyle.jpg" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![1588860251724](./figures/5633_result_of_QAPlug.jpg)
