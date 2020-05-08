@@ -2,7 +2,7 @@
 
 ## Issues Chosen:
 
-### Jabref:  
+### JabRef:  
 1. <https://github.com/JabRef/jabref/issues/6039>
 2. <https://github.com/JabRef/jabref/issues/6198>
 3. <https://github.com/JabRef/jabref/issues/6169>
@@ -10,7 +10,7 @@
 5. <https://github.com/JabRef/jabref/issues/6180>
 
 
-### reasons for choosing issue:
+### Reasons for choosing issue:
 
 #### [#6039](https://github.com/JabRef/jabref/issues/6039) Font size increase does not increase preferences font size
 1. The difficulty for this issue is proper 
@@ -51,7 +51,7 @@ after fixing the issue:
 ### [#6198](https://github.com/JabRef/jabref/issues/6198) Storing selected preview throws java.lang.IllegalArgumentException: Value too long:
 User want to adjust the entry preview format, but exception occurs.
 
-### [#6169](https://github.com/JabRef/jabref/issues/6169) ":PDF" will not show the pdf icon in the
+### [#6169](https://github.com/JabRef/jabref/issues/6169) ":PDF" will not show the pdf icon in the linked file column
 User want to directed know the linked file type of a entry in main table.
 
 ### [#6146](https://github.com/JabRef/jabref/issues/6146) Can't jump in ordered author list by typing letters
@@ -68,11 +68,11 @@ User want to keep group pane size when resizing window, so that he/her don't nee
 
 ### During fixing #6039
 
-Checkstyle:
+#### Checkstyle:
 
 <img src="./figures/6039_result_of_checkstyle.png" width="70%" height="70%"/>
 
-Findbugs/PMD(using QAPlug):
+#### Findbugs/PMD(using QAPlug):
 
 ![1588860251722](./figures/6039_result_of_QAPlug.png)
 

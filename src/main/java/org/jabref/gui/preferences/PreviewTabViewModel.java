@@ -230,6 +230,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
     @Override
     public List<String> getRestartWarnings() { return new ArrayList<>(); }
 
+    /**
+     * Move the selected item from available list to chosen list
+     * */
     public void addToChosen() {
         List<PreviewLayout> selected = new ArrayList<>(availableSelectionModelProperty.getValue().getSelectedItems());
         availableSelectionModelProperty.getValue().clearSelection();
@@ -237,6 +240,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         chosenListProperty.addAll(selected);
     }
 
+    /**
+     * Move the selected item from chosen list to available list
+     * */
     public void removeFromChosen() {
         List<PreviewLayout> selected = new ArrayList<>(chosenSelectionModelProperty.getValue().getSelectedItems());
         chosenSelectionModelProperty.getValue().clearSelection();
@@ -245,6 +251,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         availableListProperty.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
     }
 
+    /**
+     * Move selected item in chosen list one step up.
+     * */
     public void selectedInChosenUp() {
         if (chosenSelectionModelProperty.getValue().isEmpty()) {
             return;
@@ -266,6 +275,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         refreshPreview();
     }
 
+    /**
+     * Move selected item in chosen list one step down.
+     * */
     public void selectedInChosenDown() {
         if (chosenSelectionModelProperty.getValue().isEmpty()) {
             return;
@@ -368,6 +380,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         }
     }
 
+    /**
+     * Set the drag source when drag event detected.
+     * */
     public void dragDetected(ListProperty<PreviewLayout> sourceList, ObjectProperty<MultipleSelectionModel<PreviewLayout>> sourceSelectionModel, List<PreviewLayout> selectedLayouts, Dragboard dragboard) {
         ClipboardContent content = new ClipboardContent();
         content.put(DragAndDropDataFormats.PREVIEWLAYOUTS, "");

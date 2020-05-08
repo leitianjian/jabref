@@ -155,6 +155,10 @@ public class LinkedFileViewModel extends AbstractViewModel {
         return linkedFile.findIn(directories);
     }
 
+    /**
+     * Get the JabRefIcon of a linked file
+     * @return A JabRefIcon type icon which can directly convert to graphic node
+     * */
     public JabRefIcon getTypeIcon() {
         return externalFileTypes.fromLinkedFile(linkedFile, false)
                                 .map(ExternalFileType::getIcon)

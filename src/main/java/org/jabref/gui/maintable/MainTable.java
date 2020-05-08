@@ -146,7 +146,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
             return;
         }
 
-        if (System.currentTimeMillis() - lastKeyPressTime < this.TWO_KEY_PRESS_MAX_DURATION) {
+        if (System.currentTimeMillis() - lastKeyPressTime < TWO_KEY_PRESS_MAX_DURATION) {
             columnSearchTerm += keyEvent.getCharacter().toLowerCase();
         } else {
             columnSearchTerm = keyEvent.getCharacter().toLowerCase();
