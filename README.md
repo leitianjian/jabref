@@ -5,6 +5,7 @@
 2. <https://github.com/JabRef/jabref/issues/6198>
 3. <https://github.com/JabRef/jabref/issues/6169>
 4. <https://github.com/JabRef/jabref/issues/6146>
+5. <https://github.com/JabRef/jabref/issues/6180>
 
 
 ### reasons for choosing issue:
@@ -28,6 +29,10 @@
 2. User requirement.
 3. Nobody claims that.
 
+### [#6180](https://github.com/JabRef/jabref/issues/6180)
+1. moderate difficulty for us.
+2. User requirement.
+
 ## User story for each issue:
 
 ### [#6039](https://github.com/JabRef/jabref/issues/6039)
@@ -50,8 +55,10 @@ User want to directed know the linked file type of a entry in main table.
 
 
 ### [#6146](https://github.com/JabRef/jabref/issues/6146)
-User has a habbit to type a letter/digit to jump to target entry after sort some columns
+User has a habbit to type a letter/digit to jump to target entry after sort some columns.
 
+### [#6180](https://github.com/JabRef/jabref/issues/6180)
+User want to keep group pane size when resizing window, so that he/her don't need to resize group pane manually when resizing window.
 
 ## Results of static code analysis tool
 
