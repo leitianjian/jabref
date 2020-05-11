@@ -43,6 +43,8 @@
 
 ## Test scenario
 
+![1588860251731](./figures/not_always_test.png)
+
 ### [#6039](https://github.com/JabRef/jabref/issues/6039) Font size increase does not increase preferences font size
 
 We have tried our best to use mock testing method to test. However, we came across inevitable hinder. We can't get the corresponding font size value from css file and only can get the metadata of css which is useless(https://stackoverflow.com/questions/33144735/how-to-get-the-value-of-a-css-definition-in-javafx). Therefore, we can't write tests for this part.
