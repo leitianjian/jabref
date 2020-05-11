@@ -92,7 +92,7 @@ User will want to customize the font size of the UI，not only the main window, 
 
 before fixing issue:
 
-<img src="./figures/6039_fig_1.png" width="70%" height="70%"/>
+<img src="./figures/6039_bug_2.JPG" width="70%" height="70%"/>
 
 after fixing the issue:
 
