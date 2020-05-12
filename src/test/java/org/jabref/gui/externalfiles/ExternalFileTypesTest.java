@@ -1,7 +1,10 @@
 package org.jabref.gui.externalfiles;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.jabref.gui.externalfiletype.ExternalFileType;
 import org.jabref.gui.externalfiletype.ExternalFileTypes;
@@ -18,28 +21,31 @@ public class ExternalFileTypesTest {
     private ExternalFileTypes myExternalFileType;
 
     @BeforeEach
-    void setup() {
+    void setup() throws Exception {
         final JabRefPreferences preferences = JabRefPreferences.getInstance();
-        Globals.prefs = preferences;
 
         myExternalFileType = ExternalFileTypes.getInstance();
-        List<ExternalFileType> list = new ArrayList<ExternalFileType>();
+        Set<ExternalFileType> list = new TreeSet<ExternalFileType>();
         list.add(StandardExternalFileType.PDF);
         list.add(StandardExternalFileType.Word);
         list.add(StandardExternalFileType.Excel);
-
+        Class c = myExternalFileType.getClass();
+        Field f = c.getDeclaredField("externalFileTypes");
+        f.setAccessible(true);
+        f.set(myExternalFileType, list);
     }
 
     @Test
     void getExternalFileTypeByNamePositiveTest(){
-        assertEquals(myExternalFileType.getExternalFileTypeByName("pdf").get(),StandardExternalFileType.PDF);
-        assertEquals(myExternalFileType.getExternalFileTypeByName("doc").get(),StandardExternalFileType.Word);
-        assertEquals(myExternalFileType.getExternalFileTypeByName("xls").get(),StandardExternalFileType.Excel);
+        assertEquals(myExternalFileType.getExternalFileTypeByName("PDF").get(),StandardExternalFileType.PDF);
+        assertEquals(myExternalFileType.getExternalFileTypeByName("Word").get(),StandardExternalFileType.Word);
+        assertEquals(myExternalFileType.getExternalFileTypeByName("Excel").get(),StandardExternalFileType.Excel);
     }
 
     @Test
     void getExternalFileTypeByNameNegativeTest(){
-        assertEquals(myExternalFileType.getExternalFileTypeByName("ppt").get().getName(),"");
+        assertEquals(myExternalFileType.getExternalFileTypeByName("Text").get().getName(),"");
     }
+
 
 }
