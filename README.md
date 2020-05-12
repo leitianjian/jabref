@@ -98,6 +98,10 @@ after fixing the issue:
 
 <img src="./figures/6039_fig_2.png" width="70%" height="70%"/>
 
+Bug Cause:
+
+<img src="./figures/debug_explian.JPG" width="70%" height="70%"/>
+
 ### [#6198](https://github.com/JabRef/jabref/issues/6198) Storing selected preview throws java.lang.IllegalArgumentException: Value too long:
 User want to adjust the entry preview format, but exception occurs.
 
