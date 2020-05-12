@@ -10,6 +10,7 @@ import org.jabref.gui.externalfiletype.ExternalFileType;
 import org.jabref.gui.externalfiletype.ExternalFileTypes;
 import org.jabref.gui.externalfiletype.StandardExternalFileType;
 import org.jabref.Globals;
+import org.jabref.gui.externalfiletype.UnknownExternalFileType;
 import org.jabref.preferences.JabRefPreferences;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -44,7 +45,7 @@ public class ExternalFileTypesTest {
 
     @Test
     void getExternalFileTypeByNameNegativeTest(){
-        assertEquals(myExternalFileType.getExternalFileTypeByName("Text").get().getName(),"");
+        assertEquals(myExternalFileType.getExternalFileTypeByName("Text").get() instanceof UnknownExternalFileType,true);
     }
 
 
