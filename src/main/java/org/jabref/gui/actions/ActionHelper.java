@@ -9,6 +9,7 @@ import javafx.beans.binding.Binding;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanExpression;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TabPane;
 
 import org.jabref.gui.StateManager;
 import org.jabref.model.entry.BibEntry;
@@ -71,5 +72,15 @@ public class ActionHelper {
         }).orElse(false);
 
         return BooleanExpression.booleanExpression(fileIsPresent);
+    }
+    
+    //CS304 Issue link: https://github.com/JabRef/jabref/issues/6527
+    /**
+     * This method is to check whether there are more than one dabtabases opened.
+     * @param tabbedPane a tabbedPane contains database tabs.
+     * @return true if more than one databases opened.
+     */
+    public static BooleanExpression isOpenMultiDatabase(TabPane tabbedPane) {
+        return Bindings.size(tabbedPane.getTabs()).greaterThan(1);
     }
 }

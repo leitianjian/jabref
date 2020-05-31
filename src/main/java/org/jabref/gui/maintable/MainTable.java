@@ -330,6 +330,10 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
                         case MOVE:
                             LOGGER.debug("Mode MOVE"); // alt on win
                             importHandler.getLinker().moveFilesToFileDirAndAddToEntry(entry, files);
+                            
+                            //CS304 Issue link: https://github.com/JabRef/jabref/issues/5633
+                            panel.getEntryEditor().setEntry(entry);
+                            
                             break;
                         case COPY:
                             LOGGER.debug("Mode Copy"); // ctrl on win

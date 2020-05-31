@@ -2,7 +2,7 @@
 
 | Project | Issues link                                                  | Pull Request/commit link                     | Issue status           |
 | ------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
-| Jabref  | https://github.com/JabRef/jabref/issues/6529                 | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6529                 | <https://github.com/JabRef/jabref/pull/6558> | Pull Request accepted |
 | Jabref  | https://github.com/JabRef/jabref/issues/6527                 | <https://github.com/JabRef/jabref/pull/6551> | Pull Request submitted |
 | Jabref  | https://github.com/JabRef/jabref/issues/6447                 | <https://github.com/JabRef/jabref/pull/6516> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6039                 | <https://github.com/JabRef/jabref/pull/6429> | Pull Request submitted |
@@ -228,6 +228,30 @@ There are no warning generated because of codes modified by us
 #### Findbugs/PMD(using QAPlug):
 
 ![1588860211724](./figures/6447_result_of_QAPlug.png)
+
+### During fixing [#6527 Add more menu items to tab context menu](https://github.com/JabRef/jabref/issues/6527)
+
+#### Checkstyle:
+
+<img src="./figures/6527_result_of_checkstyle.png" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![1588860211724](./figures/6527_result_of_QAplug.png.png)
+
+![1588860211724](./figures/6527_result_of_QAplug2.png.png)
+
+### During fixing [#6529 Numbers in the file picker drop-down menu](https://github.com/JabRef/jabref/issues/6529)
+
+#### Checkstyle:
+
+<img src="./figures/5629_result_of_checkstyle.png" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![1588860211724](./figures/6529_result_of_QAplug.png.png)
+
+![1588860211724](./figures/6529_result_of_QAplug2.png.png)
 
 ### Schedule
 
