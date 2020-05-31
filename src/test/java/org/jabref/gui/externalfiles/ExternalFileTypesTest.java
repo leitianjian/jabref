@@ -18,6 +18,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * //CS304 Issue link: https://github.com/JabRef/jabref/issues/6169
+ * Test for checking if ExternalFileType instance could get getExternalFileTypeByName correctly
+ */
 public class ExternalFileTypesTest {
     private ExternalFileTypes myExternalFileType;
 
