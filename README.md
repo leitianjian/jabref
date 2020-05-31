@@ -1,4 +1,5 @@
 # Software Engineering Project Progress Report
+
 | Project | Issues link                                                  | Pull Request/commit link                     | Issue status           |
 | ------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
 | Jabref  | <https://github.com/JabRef/jabref/issues/6529?tdsourcetag=s_pctim_aiomsg> | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
@@ -11,6 +12,8 @@
 | Jabref  | https://github.com/JabRef/jabref/issues/6180                 | <https://github.com/JabRef/jabref/pull/6423> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/5633                 | <https://github.com/JabRef/jabref/pull/6446> | Pull Request submitted |
 | Jabref  | <https://github.com/JabRef/jabref/issues/6470>               | <https://github.com/JabRef/jabref/pull/6539> | Pull Request submitted |
+
+
 
 ## Issues Chosen:
 
@@ -206,6 +209,15 @@ There are no warning generated because of codes modified by us
 
 ![1588860251724](./figures/5633_result_of_QAPlug.jpg)
 
+### During fixing #6470
+
+#### Checkstyle:
+
+<img src="./figures/6470_result_of_checkstyle.PNG" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![_](./figures/6470_result_of_QAPlug.PNG)
 
 ### Schedule
 
