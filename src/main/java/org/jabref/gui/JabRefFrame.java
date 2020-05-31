@@ -182,6 +182,14 @@ public class JabRefFrame extends BorderPane {
         this.undoManager = Globals.undoManager;
         this.fileHistory = new FileHistoryMenu(prefs, dialogService, getOpenDatabaseAction());
         this.executorService = JabRefExecutorService.INSTANCE;
+        //CS304 Issue link: https://github.com/JabRef/jabref/issues/6529
+        this.setOnKeyTyped(key -> {
+            if (this.fileHistory.isShowing()) {
+                if (this.fileHistory.openFileByKey(key)) {
+                    this.fileHistory.getParentMenu().hide();
+                }
+            }
+        });
     }
 
     private static BasePanel getBasePanel(Tab tab) {
