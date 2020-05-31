@@ -2,7 +2,7 @@
 
 | Project | Issues link                                                  | Pull Request/commit link                     | Issue status           |
 | ------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
-| Jabref  | https://github.com/JabRef/jabref/issues/6529                 | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6529                 | <https://github.com/JabRef/jabref/pull/6558> | Pull Request accepted |
 | Jabref  | https://github.com/JabRef/jabref/issues/6527                 | <https://github.com/JabRef/jabref/pull/6551> | Pull Request submitted |
 | Jabref  | https://github.com/JabRef/jabref/issues/6447                 | <https://github.com/JabRef/jabref/pull/6516> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6039                 | <https://github.com/JabRef/jabref/pull/6429> | Pull Request submitted |
