@@ -24,6 +24,7 @@ import org.jabref.logic.preferences.TimestampPreferences;
 import org.jabref.model.database.BibDatabaseMode;
 import org.jabref.model.entry.field.FieldFactory;
 import org.jabref.preferences.GeneralPreferences;
+import org.jabref.preferences.JabRefPreferences;
 import org.jabref.preferences.PreferencesService;
 
 import de.saxsys.mvvmfx.utils.validation.FunctionBasedValidator;
@@ -133,10 +134,13 @@ public class GeneralTabViewModel implements PreferenceTabViewModel {
                     Localization.lang("To disable the memory stick mode"
                             + " rename or remove the jabref.xml file in the same folder as JabRef."));
         }
-
+        
+        /**
+         * //CS304 Issue link: https://github.com/JabRef/jabref/issues/6470
+         */
         preferencesService.storeGeneralPreferences(new GeneralPreferences(
                 selectedEncodingProperty.getValue(),
-                selectedBiblatexModeProperty.getValue(),
+                ((JabRefPreferences) preferencesService).getBoolean(JabRefPreferences.BIBLATEX_DEFAULT_MODE) ? BibDatabaseMode.BIBLATEX : BibDatabaseMode.BIBTEX,
                 inspectionWarningDuplicateProperty.getValue(),
                 confirmDeleteProperty.getValue(),
                 allowIntegerEditionProperty.getValue(),
