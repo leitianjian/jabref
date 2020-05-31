@@ -2,16 +2,16 @@
 
 | Project | Issues link                                                  | Pull Request/commit link                     | Issue status           |
 | ------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
-| Jabref  | <https://github.com/JabRef/jabref/issues/6529?tdsourcetag=s_pctim_aiomsg> | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
-| Jabref  | <https://github.com/JabRef/jabref/issues/6527?tdsourcetag=s_pctim_aiomsg> | <https://github.com/JabRef/jabref/pull/6551> | Pull Request submitted |
-| Jabref  | <https://github.com/JabRef/jabref/issues/6447>               | <https://github.com/JabRef/jabref/pull/6516> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/6529                 | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6527                 | <https://github.com/JabRef/jabref/pull/6551> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6447                 | <https://github.com/JabRef/jabref/pull/6516> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6039                 | <https://github.com/JabRef/jabref/pull/6429> | Pull Request submitted |
 | Jabref  | https://github.com/JabRef/jabref/issues/6198                 | <https://github.com/JabRef/jabref/pull/6372> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6169                 | <https://github.com/JabRef/jabref/pull/6264> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6146                 | <https://github.com/JabRef/jabref/pull/6440> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/6180                 | <https://github.com/JabRef/jabref/pull/6423> | Pull Request Merged    |
 | Jabref  | https://github.com/JabRef/jabref/issues/5633                 | <https://github.com/JabRef/jabref/pull/6446> | Pull Request submitted |
-| Jabref  | <https://github.com/JabRef/jabref/issues/6470>               | <https://github.com/JabRef/jabref/pull/6539> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6470                 | <https://github.com/JabRef/jabref/pull/6539> | Pull Request submitted |
 
 
 
@@ -147,7 +147,7 @@ User want to check file annotations immediately after dragging file, but don't w
 1. Our checkStyle rules can be seen in {$ProjectFolder}/config/checkstyle/checkstyle.xml
 2. We are using QAPlug in idea to replace Findbugs and PMD
 
-### During fixing #6039
+### During fixing [#6039 Font size increase does not increase preferences font size](https://github.com/JabRef/jabref/issues/6039)
 
 #### Checkstyle:
 
@@ -159,7 +159,7 @@ User want to check file annotations immediately after dragging file, but don't w
 
 There are no warning generated because of codes modified by us
 
-### During fixing #6198
+### During fixing [#6198 Storing selected preview throws java.lang.IllegalArgumentException: Value too long](https://github.com/JabRef/jabref/issues/6198)
 
 #### Checkstyle:
 
@@ -169,7 +169,7 @@ There are no warning generated because of codes modified by us
 
 ![1588860251723](./figures/6198_result_of_QAplug.png)
 
-### During fixing #6169
+### During fixing [#6169 ":PDF" will not show the pdf icon in the](https://github.com/JabRef/jabref/issues/6169)
 
 #### Checkstyle:
 
@@ -179,7 +179,7 @@ There are no warning generated because of codes modified by us
 
 ![1588860251723](./figures/6169_result_of_QAplug.png)
 
-### During fixing #6146
+### During fixing [#6146 can't jump in ordered author list by typing letters](https://github.com/JabRef/jabref/issues/6146)
 
 #### Checkstyle:
 
@@ -189,7 +189,7 @@ There are no warning generated because of codes modified by us
 
 ![1588860251723](./figures/6146_result_of_QAPlug.png)
 
-### During fixing #6180
+### During fixing [#6180 Groups panel does not keep size when resizing window](https://github.com/JabRef/jabref/issues/6180)
 
 #### CheckStyle:
 
@@ -199,7 +199,7 @@ There are no warning generated because of codes modified by us
 
 ![1588860251723](./figures/6180_result_of_QAPlug.png)
 
-### During fixing #5633
+### During fixing [#5633 File annotations should be parsed if a file is attached](https://github.com/JabRef/jabref/issues/5633)
 
 #### Checkstyle:
 
@@ -209,7 +209,7 @@ There are no warning generated because of codes modified by us
 
 ![1588860251724](./figures/5633_result_of_QAPlug.jpg)
 
-### During fixing #6470
+### During fixing [#6470 Unclear function of preference “Default bibliography mode”](https://github.com/JabRef/jabref/issues/6470)
 
 #### Checkstyle:
 
@@ -218,6 +218,16 @@ There are no warning generated because of codes modified by us
 #### Findbugs/PMD(using QAPlug):
 
 ![_](./figures/6470_result_of_QAPlug.PNG)
+
+### During fixing [#6447 Entry preview: content updated only after restart](https://github.com/JabRef/jabref/issues/6447)
+
+#### Checkstyle:
+
+<img src="./figures/6447_result_of_checkstyle.png" width="70%" height="70%"/>
+
+#### Findbugs/PMD(using QAPlug):
+
+![1588860211724](./figures/6447_result_of_QAPlug.png)
 
 ### Schedule
 
