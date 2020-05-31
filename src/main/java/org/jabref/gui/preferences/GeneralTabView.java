@@ -58,7 +58,9 @@ public class GeneralTabView extends AbstractPreferenceTabView<GeneralTabViewMode
     }
 
     @Override
-    public String getTabName() { return Localization.lang("General"); }
+    public String getTabName() {
+        return Localization.lang("General");
+    }
 
     public void initialize() {
         this.viewModel = new GeneralTabViewModel(dialogService, preferences);

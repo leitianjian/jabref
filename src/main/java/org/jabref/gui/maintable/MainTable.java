@@ -46,7 +46,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MainTable extends TableView<BibEntryTableViewModel> {
-    private static final long TWO_KEY_PRESS_MAX_DURATION = 700;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(MainTable.class);
 
     private final BasePanel panel;
@@ -67,7 +67,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
         super();
 
         this.setOnKeyTyped(key -> {
-            if (this.getSortOrder().size() == 0) {
+            if (this.getSortOrder().isEmpty()) {
                 return;
             }
             this.jumpToSearchKey(getSortOrder().get(0), key);
@@ -90,10 +90,10 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
 
         new ViewModelTableRowFactory<BibEntryTableViewModel>()
                 .withOnMouseClickedEvent((entry, event) -> {
-                                                                  if (event.getClickCount() == 2) {
-                                                                      panel.showAndEdit(entry.getEntry());
-                                                                  }
-                                                              })
+                    if (event.getClickCount() == 2) {
+                        panel.showAndEdit(entry.getEntry());
+                    }
+                })
                 .withContextMenu(entry -> RightClickMenu.create(entry, keyBindingRepository, panel, frame.getDialogService(), Globals.stateManager, Globals.prefs))
                 .setOnDragDetected(this::handleOnDragDetected)
                 .setOnDragDropped(this::handleOnDragDropped)
@@ -105,10 +105,10 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
         this.getSortOrder().clear();
         preferences.getColumnPreferences().getColumnSortOrder().forEach(columnModel ->
                 this.getColumns().stream()
-                        .map(column -> (MainTableColumn<?>) column)
-                        .filter(column -> column.getModel().equals(columnModel))
-                        .findFirst()
-                        .ifPresent(column -> this.getSortOrder().add(column)));
+                    .map(column -> (MainTableColumn<?>) column)
+                    .filter(column -> column.getModel().equals(columnModel))
+                    .findFirst()
+                    .ifPresent(column -> this.getSortOrder().add(column)));
 
         if (preferences.getResizeColumnsToFit()) {
             this.setColumnResizePolicy(new SmartConstrainedResizePolicy());
@@ -136,8 +136,9 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
 
     /**
      * This is called, if a user starts typing some characters into the keyboard with focus on main table.
-     * The tableview will scroll to the cell with the name of the specific column fitting those characters.
-     * @param sortedColumn The ListView currently focused
+     * The {@link MainTable} will scroll to the cell with the same starting column value and typed string
+     *
+     * @param sortedColumn The sorted column in {@link MainTable}
      * @param keyEvent The pressed character
      */
 
@@ -146,7 +147,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
             return;
         }
 
-        if (System.currentTimeMillis() - lastKeyPressTime < TWO_KEY_PRESS_MAX_DURATION) {
+        if (System.currentTimeMillis() - lastKeyPressTime < 700) {
             columnSearchTerm += keyEvent.getCharacter().toLowerCase();
         } else {
             columnSearchTerm = keyEvent.getCharacter().toLowerCase();
@@ -158,9 +159,13 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
             .filter(item -> Optional.ofNullable(sortedColumn.getCellObservableValue(item).getValue())
                                     .map(Object::toString)
                                     .orElse("")
-                                    .toLowerCase().startsWith(columnSearchTerm))
+                                    .toLowerCase()
+                                    .startsWith(columnSearchTerm))
             .findFirst()
-            .ifPresent(item -> { this.scrollTo(item); this.clearAndSelect(item.getEntry()); });
+            .ifPresent(item -> {
+                this.scrollTo(item);
+                this.clearAndSelect(item.getEntry());
+            });
     }
 
     @Subscribe
@@ -321,7 +326,6 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
                         case MOVE:
                             LOGGER.debug("Mode MOVE"); // alt on win
                             importHandler.getLinker().moveFilesToFileDirAndAddToEntry(entry, files);
-                            panel.getEntryEditor().setEntry(entry);
                             break;
                         case COPY:
                             LOGGER.debug("Mode Copy"); // ctrl on win
@@ -352,10 +356,10 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
 
     public List<BibEntry> getSelectedEntries() {
         return getSelectionModel()
-                                  .getSelectedItems()
-                                  .stream()
-                                  .map(BibEntryTableViewModel::getEntry)
-                                  .collect(Collectors.toList());
+                .getSelectedItems()
+                .stream()
+                .map(BibEntryTableViewModel::getEntry)
+                .collect(Collectors.toList());
     }
 
     private Optional<BibEntryTableViewModel> findEntry(BibEntry entry) {
