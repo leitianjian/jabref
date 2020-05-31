@@ -66,12 +66,14 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
                      MainTablePreferences preferences, ExternalFileTypes externalFileTypes, KeyBindingRepository keyBindingRepository) {
         super();
 
+        //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6146
         this.setOnKeyTyped(key -> {
             if (this.getSortOrder().isEmpty()) {
                 return;
             }
             this.jumpToSearchKey(getSortOrder().get(0), key);
         });
+        //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6146
 
         this.model = model;
         this.database = Objects.requireNonNull(database);
@@ -134,6 +136,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
         database.getDatabase().registerListener(this);
     }
 
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6146
     /**
      * This is called, if a user starts typing some characters into the keyboard with focus on main table.
      * The {@link MainTable} will scroll to the cell with the same starting column value and typed string
@@ -167,6 +170,7 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
                 this.clearAndSelect(item.getEntry());
             });
     }
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6146
 
     @Subscribe
     public void listen(EntriesAddedEvent event) {

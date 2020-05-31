@@ -115,9 +115,11 @@ public class PreviewPanel extends VBox {
         }
     }
 
+    // CS304 Issue link: https://github.com/JabRef/jabref/issues/6447
     private void updateLayoutByPreferences(JabRefPreferences preferences) {
         previewView.setLayout(preferences.getPreviewPreferences().getCurrentPreviewStyle());
     }
+    // CS304 Issue link: https://github.com/JabRef/jabref/issues/6447
 
     private void createKeyBindings() {
         previewView.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
@@ -156,11 +158,17 @@ public class PreviewPanel extends VBox {
         return menu;
     }
 
+    // CS304 Issue link: https://github.com/JabRef/jabref/issues/6447
+    /**
+     * Set the preview entry according to parameter
+     * @param entry the target entry to show the reference preivew
+     * */
     public void setEntry(BibEntry entry) {
         updateLayoutByPreferences(preferences);
         this.entry = entry;
         previewView.setEntry(entry);
     }
+    // CS304 Issue link: https://github.com/JabRef/jabref/issues/6447
 
     public void print() {
         previewView.print();

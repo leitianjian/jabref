@@ -81,7 +81,9 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
 
     private final CustomLocalDragboard localDragboard;
     private ListProperty<PreviewLayout> dragSourceList = null;
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
     private ObjectProperty<MultipleSelectionModel<PreviewLayout>> dragSourceSelectionModel = null;
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
 
     public PreviewTabViewModel(DialogService dialogService, JabRefPreferences preferences, TaskExecutor taskExecutor, StateManager stateManager) {
         this.dialogService = dialogService;
@@ -245,6 +247,7 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         return new ArrayList<>();
     }
 
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
     /**
      * Move the selected item from available list to chosen list
      * */
@@ -314,6 +317,7 @@ public class PreviewTabViewModel implements PreferenceTabViewModel {
         chosenSelectionModelProperty.getValue().select(newIndices.get(0));
         refreshPreview();
     }
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
 
     public void resetDefaultLayout() {
         PreviewLayout defaultLayout = findLayoutByName("Preview");

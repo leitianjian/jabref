@@ -168,6 +168,7 @@ public class LinkedFileViewModel extends AbstractViewModel {
         return linkedFile.findIn(directories);
     }
 
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6169
     /**
      * Get the JabRefIcon of a linked file
      * @return A JabRefIcon type icon which can directly convert to graphic node
@@ -177,6 +178,7 @@ public class LinkedFileViewModel extends AbstractViewModel {
                                 .map(ExternalFileType::getIcon)
                                 .orElse(IconTheme.JabRefIcons.FILE);
     }
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6169
 
     public void markAsAutomaticallyFound() {
         isAutomaticallyFound.setValue(true);

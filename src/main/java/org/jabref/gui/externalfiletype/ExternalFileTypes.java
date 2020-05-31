@@ -49,6 +49,7 @@ public class ExternalFileTypes {
         return externalFileTypes;
     }
 
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6169
     /**
      * Look up the external file type registered with this name, if any.
      *
@@ -63,6 +64,7 @@ public class ExternalFileTypes {
         // Return an instance that signifies an unknown file type:
         return Optional.of(new UnknownExternalFileType(name));
     }
+    //CS304 Issue Link: https://github.com/JabRef/jabref/issues/6169
 
     /**
      * Look up the external file type registered for this extension, if any.

@@ -212,6 +212,7 @@ public class PreviewTabView extends AbstractPreferenceTabView<PreviewTabViewMode
         viewModel.dragOver(event);
     }
 
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
     private void dragDetectedInAvailable(MouseEvent event) {
         List<PreviewLayout> selectedLayouts = new ArrayList<>(viewModel.availableSelectionModelProperty().getValue().getSelectedItems());
         if (!selectedLayouts.isEmpty()) {
@@ -229,6 +230,7 @@ public class PreviewTabView extends AbstractPreferenceTabView<PreviewTabViewMode
         }
         event.consume();
     }
+    // CS304 Issue Link: https://github.com/JabRef/jabref/issues/6198
 
     private void dragDropped(ListProperty<PreviewLayout> targetList, DragEvent event) {
         boolean success = viewModel.dragDropped(targetList, event.getDragboard());
