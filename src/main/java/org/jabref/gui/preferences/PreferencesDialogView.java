@@ -61,6 +61,7 @@ public class PreferencesDialogView extends BaseDialog<PreferencesDialogViewModel
 
     /**
      * Return preferenceTabList the preferenceTabList
+     * //CS304 Issue link: https://github.com/JabRef/jabref/issues/6039
      */
     public ListView<PreferencesTab> getPreferenceTabList() { return preferenceTabList; }
 
