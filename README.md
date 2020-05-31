@@ -1,4 +1,16 @@
 # Software Engineering Project Progress Report
+| Project | Issues link                                                  | Pull Request/commit link                     | Issue status           |
+| ------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
+| Jabref  | <https://github.com/JabRef/jabref/issues/6529?tdsourcetag=s_pctim_aiomsg> | <https://github.com/JabRef/jabref/pull/6558> | Pull Request submitted |
+| Jabref  | <https://github.com/JabRef/jabref/issues/6527?tdsourcetag=s_pctim_aiomsg> | <https://github.com/JabRef/jabref/pull/6551> | Pull Request submitted |
+| Jabref  | <https://github.com/JabRef/jabref/issues/6447>               | <https://github.com/JabRef/jabref/pull/6516> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/6039                 | <https://github.com/JabRef/jabref/pull/6429> | Pull Request submitted |
+| Jabref  | https://github.com/JabRef/jabref/issues/6198                 | <https://github.com/JabRef/jabref/pull/6372> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/6169                 | <https://github.com/JabRef/jabref/pull/6264> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/6146                 | <https://github.com/JabRef/jabref/pull/6440> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/6180                 | <https://github.com/JabRef/jabref/pull/6423> | Pull Request Merged    |
+| Jabref  | https://github.com/JabRef/jabref/issues/5633                 | <https://github.com/JabRef/jabref/pull/6446> | Pull Request submitted |
+| Jabref  | <https://github.com/JabRef/jabref/issues/6470>               | <https://github.com/JabRef/jabref/pull/6539> | Pull Request submitted |
 
 ## Issues Chosen:
 
