@@ -152,7 +152,11 @@ class LinkedFileViewModelTest {
         assertFalse(removed);
         assertTrue(Files.exists(tempFile));
     }
-
+        
+    /**
+     * //CS304 Issue link: https://github.com/JabRef/jabref/issues/6169
+     * Test for checking if ExternalFileType instance could get getExternalFileTypeByName correctly
+     */
     @Test
     void getTypeIconTest() {
         ExternalFileTypes myExternalFileType = mock(ExternalFileTypes.class);
