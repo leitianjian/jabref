@@ -16,6 +16,7 @@ public class ShowPreferencesAction extends SimpleCommand {
     }
 
     /**
+     * //CS304 Issue link: https://github.com/JabRef/jabref/issues/6039
      * Execute the action showing {@link PreferencesDialogView}
      */
     @Override
